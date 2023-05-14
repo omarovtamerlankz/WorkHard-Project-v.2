@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title>Калькулятор калорий</title>
+<head>
+  <!-- Этот код добавлет иконку логотипа на вкладку сайта -->
+  <link rel="shortcut icon" href="logo4.png">
+</head>
+
+<body>
+  <!-- Создано два div-блока с классами "header" и "footer" чтоб сделать рамки для сайта -->
+  <div class="header"></div>
+  <div class="footer"></div>
+
+  <style>
+    /* Стили для блока с классом "header" */
+    .header {
+      width: 1920px;
+      height: 75px;
+      background-color: #263A70;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    /* Стили для блока с классом "footer" */
+    .footer {
+      width: 1920px;
+      height: 230px;
+      background-color: #263A70;
+      position: absolute;
+      top: 856px;
+      left: 0;
+    }
+    </style>
+  
+<!-- Добавлен логотип привязанный ссылкой на главную страницу --> 
+<a href="file:///C:/Users/%D0%A1%D1%83%D0%BB%D0%BF%D0%B0%D0%BA/Documents/WorkHard%20Project/MuscleWiki.html" 
+style="position:absolute; left: 50px; right:1760; top: 5px;">
+<img src="logo4.png" alt=" ">
+</a>
+
+<style>
+  /* Стили для футера */
+  footer {
+    position: absolute;
+    top: 900px;
+    left: 90px;
+    color: white;
+    font-size: 1em;
+  }
+
+  /* Стили гиперссылок футера */
+  footer a {
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+  }
+</style>
+
+  <!-- HTML код для футера -->
+  <footer>
+    <p>© 2023-2024 WorkHard</p>
+    <p>Все права защищены.
+    <a href="/disclaimer">Disclaimer</a> | <a href="/copyright">Copyright</a> | <a href="/newsletter">Newsletter</a></p>
+    <p>Поддержка: <a href="mailto:support@workhard.com">support@workhard.com</a></p>
+  </footer>
+  
+  <!-- Стили для секции "О нас" -->
+      <style>
+      .about-us {
+        position: absolute;
+        top: 875px;
+        left: 1200px;
+        width: 100%;
+        color:white;
+      }
+      </style>
+  
+  <!-- HTML код для секции "О нас" -->
+      <section class="about-us">
+        <h3>О нас</h3>
+      </section>
+  
+  <!-- Блок социальных ссылок, отображаемые в нижней части страницы -->   
+  <div style="position: absolute; top: 935px; left: 1200px;">
+    <a href="https://www.instagram.com/workhard_kz/" style="display: block; margin-bottom: 12px; color: #ffffff;">Instagram</a>
+    <a href="https://www.youtube.com/channel/UCTC3XPvGqNqNwwMYfFsxu4A" style="display: block; margin-bottom: 12px; color: #ffffff;">Youtube</a>
+    <a href="https://t.me/+fa4uq6dRePdkZWMy" style="display: block; margin-bottom: 12px; color: #ffffff;">Telegram</a>
+  </div>
+  
+</body>
+
+<body>
+  <!-- Этот код создает кнопку "Назад" в правом нижнем углу страницы, 
+  которая позволяет вернуться на предыдущую страницу в истории браузера при нажатии. --> 
+  <style>
+    .goBack{
+      position: absolute;
+      top: 800px;
+      left: 950px;
+    }
+    </style>
+  
+    <button class="goBack" onclick="goBack()">Назад</button>
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
+</body>
+
+<style>
+/* CSS-код задает стили для элементов страницы, включая шрифт, цвета и расположение. */  
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        width: 150px;
+      }
+
+      input[type="submit"] {
+        padding: 5px 10px;
+        background-color: #263A70;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #365196;
+      }
+</style>
+
+<body>
+<!-- Код содержит форму, которая принимает вес, рост, возраст пользователя и уровень его активности. 
+  При отправке формы вызывается функция calculateCalories(), 
+  которая рассчитывает рекомендуемое количество калорий для употребления в течение дня и выводит результат на страницу.-->
+      <h1 style="text-align: left; margin-top: 95px;">Калькулятор калорий</h1>
+  
+    <form onsubmit="calculateCalories(); return false;">
+      <label for="weight">Ваш вес (в кг):</label>
+      <input type="text" id="weight" name="weight" required>
+
+      <label for="height">Ваш рост (в см):</label>
+      <input type="text" id="height" name="height" required>
+
+      <label for="age">Ваш возраст:</label>
+      <input type="text" id="age" name="age" required>
+
+      <label for="activity">Уровень активности:</label>
+      <select id="activity" name="activity">
+        <option value="1.2">Минимальная активность (минимум или отсутствие физических нагрузок)</option>
+        <option value="1.375">Низкая активность (физические нагрузки 1-3 раза в неделю)</option>
+        <option value="1.55">Средняя активность (физические нагрузки 3-5 раз в неделю)</option>
+        <option value="1.725">Высокая активность (интенсивные физические нагрузки 6-7 раз в неделю)</option>
+        <option value="1.9">Очень высокая активность (физические нагрузки 2 раза в день)</option>
+      </select>
+
+      <input type="submit" value="Рассчитать">
+    </form>
+
+    <div id="result"></div>
+    <script>
+        function calculateCalories() {
+          // Получаем значения полей ввода
+          var weight = parseFloat(document.getElementById('weight').value);
+          var height = parseFloat(document.getElementById('height').value);
+          var age = parseInt(document.getElementById('age').value);
+          var activity = parseFloat(document.getElementById('activity').value);
+        
+          // Рассчитываем базовую метаболическую скорость
+          var bmr = 88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age);
+        
+          // Рассчитываем дневную норму калорий
+          var calories = Math.round(bmr * activity);
+        
+          // Отображаем результат
+          var result = document.getElementById('result');
+          result.innerHTML = 'Ваша дневная норма калорий: ' + calories + ' ккал';
+          result.style.display = 'block';
+        }
+        </script>
+</body>
+
+</html>
